@@ -62,6 +62,7 @@ def xml_to_csv(path):
     xml_df = pd.DataFrame(xml_list, columns=column_name)
     classes_names = list(set(classes_names))
     classes_names.sort()
+    classes_names.insert(0, classes_names.pop())
     return xml_df, classes_names
 
 
